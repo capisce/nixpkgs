@@ -84,6 +84,7 @@
   ./programs/browserpass.nix
   ./programs/ccache.nix
   ./programs/cdemu.nix
+  ./programs/chrome-token-signing.nix
   ./programs/chromium.nix
   ./programs/command-not-found/command-not-found.nix
   ./programs/criu.nix

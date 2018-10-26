@@ -4842,6 +4842,7 @@ with pkgs;
 
   qastools = libsForQt5.callPackage ../tools/audio/qastools { };
 
+  chrome-token-signing = libsForQt5.callPackage ../tools/security/chrome-token-signing {};
   qesteidutil = libsForQt5.callPackage ../tools/security/qesteidutil { } ;
   qdigidoc = libsForQt5.callPackage ../tools/security/qdigidoc { } ;
   esteidfirefoxplugin = callPackage ../applications/networking/browsers/mozilla-plugins/esteidfirefoxplugin { };
