@@ -33,12 +33,13 @@ stdenv.mkDerivation rec {
       substituteInPlace $f --replace "/usr" "$out"
     done
     install -D -t $out/bin chrome-token-signing
+    install -D -t $out/lib/mozilla/native-messaging-hosts ff/ee.ria.esteid.json
     install -D -t $out/etc/chromium/native-messaging-hosts ee.ria.esteid.json
     install -D -t $out/etc/opt/chrome/native-messaging-hosts ee.ria.esteid.json
   '';
 
   meta = with stdenv.lib; {
-    description = "Chrome extension for signing with your eID on the web";
+    description = "Chrome and Firefox extension for signing with your eID on the web";
     homepage = http://www.id.ee/;
     license = licenses.lgpl2;
     platforms = platforms.linux;

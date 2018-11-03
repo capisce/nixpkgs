@@ -6,7 +6,7 @@ with lib;
 
   ###### interface
   options = {
-    programs.chrome-token-signing.enable = mkEnableOption "Chrome extension for signing with your eID on the web";
+    programs.chrome-token-signing.enable = mkEnableOption "Chrome and Firefox extension for signing with your eID on the web";
   };
 
   ###### implementation
@@ -16,5 +16,6 @@ with lib;
       "chromium/native-messaging-hosts/ee.ria.esteid.json".source = "${pkgs.chrome-token-signing}/etc/chromium/native-messaging-hosts/ee.ria.esteid.json";
       "opt/chrome/native-messaging-hosts/ee.ria.esteid.json".source = "${pkgs.chrome-token-signing}/etc/opt/chrome/native-messaging-hosts/ee.ria.esteid.json";
     };
+    nixpkgs.config.firefox.enableChromeTokenSigning = true;
   };
 }
